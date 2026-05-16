@@ -1,0 +1,254 @@
+<!DOCTYPE html><html lang="it"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-container": "#fffbff",
+                    "on-tertiary-container": "#fffbff",
+                    "error-container": "#ffdad6",
+                    "surface-container": "#ffe8ee",
+                    "surface-variant": "#f8dbe3",
+                    "surface-container-lowest": "#ffffff",
+                    "outline": "#8d6f78",
+                    "surface": "#fff8f8",
+                    "inverse-surface": "#3d2c31",
+                    "tertiary-container": "#907010",
+                    "on-tertiary-fixed-variant": "#594400",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed-dim": "#e9c25e",
+                    "on-secondary-fixed": "#001f2a",
+                    "secondary-fixed-dim": "#6cd3fc",
+                    "primary-container": "#df0b81",
+                    "secondary": "#006783",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-fixed": "#251a00",
+                    "primary-fixed": "#ffd9e3",
+                    "tertiary-fixed": "#ffdf95",
+                    "on-secondary-container": "#005c75",
+                    "inverse-primary": "#ffb0cb",
+                    "primary-fixed-dim": "#ffb0cb",
+                    "outline-variant": "#e1bdc7",
+                    "surface-dim": "#efd3da",
+                    "on-tertiary": "#ffffff",
+                    "surface-tint": "#b80069",
+                    "on-surface-variant": "#5a3f48",
+                    "error": "#ba1a1a",
+                    "surface-container-highest": "#f8dbe3",
+                    "secondary-fixed": "#bce9ff",
+                    "primary": "#b40067",
+                    "tertiary": "#735800",
+                    "on-primary-fixed-variant": "#8d004f",
+                    "background": "#fff8f8",
+                    "surface-container-high": "#fee1e8",
+                    "secondary-container": "#70d6ff",
+                    "on-surface": "#27171c",
+                    "on-background": "#27171c",
+                    "surface-container-low": "#fff0f3",
+                    "inverse-on-surface": "#ffecf0",
+                    "on-primary": "#ffffff",
+                    "surface-bright": "#fff8f8",
+                    "on-secondary-fixed-variant": "#004d63",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed": "#3e0020"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max": "1200px",
+                    "base": "8px",
+                    "md": "24px",
+                    "gutter": "24px",
+                    "xs": "4px",
+                    "lg": "48px",
+                    "xl": "80px",
+                    "sm": "12px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "label-bold": ["Plus Jakarta Sans"],
+                    "headline-xl": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-md": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "500"}],
+                    "label-bold": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .squishy-interaction {
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+        }
+        .squishy-interaction:hover {
+            transform: scale(1.02);
+        }
+        .squishy-interaction:active {
+            transform: scale(0.98);
+        }
+        .custom-shadow {
+            box-shadow: 0 10px 40px rgba(255, 51, 153, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-background font-body-md text-on-background min-h-screen">
+<!-- TopAppBar -->
+<nav class="bg-white/60 backdrop-blur-xl rounded-full sticky top-4 mx-4 z-50 shadow-[0_10px_40px_rgba(255,51,153,0.15)] flex justify-between items-center w-[calc(100%-2rem)] max-w-5xl md:mx-auto px-6 py-3"><button class="material-symbols-outlined text-pink-500 hover:bg-pink-50 transition-all p-2 rounded-full active:scale-95 flex items-center justify-center" onclick="window.history.back()">chevron_left</button>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary">
+<img alt="student profile photo" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uiGVfv4D8hinGrYt2akA4RNsy79CQCz9_bltIq62YtDWGg8IE5xgph-nEpivKyRCeFOLmT6rBVGn_zwKSzmpetmNPUW8SAqjyHM52KClGBWHMnxQ0TxV9HNdw09FjIBYZy4U5OMDbE3ByMOQlXXN3QgQI3Dng_8TfXwPwWQ_MtP4c_WeRu2FsbkvXFsTpVUGqd4PDdmQdFyRkEEEF2H2xfGbmC5Xuh-upXmTwEraN_JCtAPeQQX74f9sz8">
+</div>
+<span class="text-2xl font-black text-pink-500 font-['Plus_Jakarta_Sans'] tracking-tight">Chiara Folci</span>
+</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-slate-500 font-medium hover:scale-105 hover:bg-pink-50 transition-all duration-300 px-3 py-1 rounded-full" href="#">Projects</a>
+<a class="text-pink-600 font-extrabold hover:scale-105 hover:bg-pink-50 transition-all duration-300 px-3 py-1 rounded-full" href="#">My Experience</a>
+<a class="text-slate-500 font-medium hover:scale-105 hover:bg-pink-50 transition-all duration-300 px-3 py-1 rounded-full" href="#">Contact</a>
+</div>
+<button class="material-symbols-outlined text-pink-500 hover:scale-105 transition-all p-2 rounded-full active:scale-95">menu</button>
+</nav>
+<main class="max-w-5xl mx-auto px-6 pt-xl pb-xl">
+<!-- Hero Section -->
+<header class="mb-xl text-center md:text-left">
+<div class="inline-flex items-center gap-2 px-4 py-2 bg-secondary-container text-on-secondary-container rounded-full font-label-bold text-label-bold mb-md uppercase tracking-widest">
+<span class="material-symbols-outlined text-[18px]">sports_volleyball</span>
+                PCTO Experience
+            </div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface mb-md">
+                Pallavolo Scanzorosciate <span class="text-primary italic font-black">(Serie C)</span>
+</h1>
+<p class="text-on-surface-variant max-w-2xl text-body-md">
+                Dopo una stagione vincente in serie D, ho partecipato al campionato regionale di Serie C femminile che mi ha permesso di crescere come atleta e come persona.</p>
+</header>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Main Featured Image -->
+<div class="md:col-span-8 h-[400px] rounded-xl overflow-hidden shadow-custom squishy-interaction relative">
+<img alt="Pallavolo Scanzorosciate Team" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0ui8r-JDYOhBjENSzQJG4bKJk4hP2bhms_soQwDHVZnLj1_iAjrRzSGnKQfVDODsw5xqYpHzq5e88w5yRkVR7IU_hPF-4zU-UYIbWEbha9nKcyJeyvUWpKd3oWy4AVNwth5Ii6HKtMlS9LDZhGKszK-AJPF--g_wyM3CpxKJ2QHjCnE9szks5-JE7Dv9dGCEFTxFhpKyEFADNJWZx1Jhmnf55GlmktjbD30ZmhW5f5oFFNgjildYdNEDPnuE8pdK01-qMRLsD_YxYg">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-end items-end p-lg">
+<div class="text-white">
+<p class="font-label-bold uppercase tracking-widest text-pink-300">Location</p>
+<h3 class="text-headline-lg font-headline-lg">Scanzorosciate, Bergamo</h3>
+</div>
+</div>
+</div>
+<!-- Focus Card -->
+<div class="md:col-span-4 bg-white rounded-xl p-md shadow-custom flex flex-col justify-center items-center text-center squishy-interaction border-2 border-pink-50">
+<div class="w-20 h-20 bg-primary-container rounded-full flex items-center justify-center mb-md shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-white text-4xl" style="font-variation-settings: &quot;FILL&quot; 1;">groups</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-primary mb-xs">Teamwork</h3>
+<p class="text-on-surface-variant">Sinergia perfetta in ogni azione.</p>
+</div>
+<!-- Description Card -->
+<div class="md:col-span-7 glass-card border-2 border-white rounded-xl p-lg shadow-custom relative overflow-hidden">
+<div class="absolute -top-10 -right-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl"></div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-md flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">description</span>
+                    Dettaglio Attività
+                </h2>
+<div class="space-y-md text-on-surface-variant">
+<p class="">Impegno agonistico costante nel campionato regionale di <strong>Serie C Femminile</strong>. L'esperienza ha richiesto una dedizione totale agli allenamenti e una preparazione atletica e tattica meticolosa.</p>
+<p class="">Il ruolo ha permesso di sviluppare competenze trasversali fondamentali: la <strong>gestione dello stress</strong> nei momenti decisivi del match e una <strong>leadership</strong> proattiva per guidare le compagne verso l'obiettivo comune.</p>
+</div>
+</div>
+<!-- Stats/Chips Grid -->
+<div class="md:col-span-5 grid grid-cols-2 gap-md">
+<div class="bg-surface-container rounded-xl p-md flex flex-col items-center justify-center text-center shadow-sm">
+<span class="text-headline-lg font-black text-primary">25-26</span>
+<span class="font-label-bold text-on-surface-variant">ANNO SCOLASTICO</span>
+</div>
+<div class="bg-surface-container-highest rounded-xl p-md flex flex-col items-center justify-center text-center shadow-sm">
+<span class="material-symbols-outlined text-primary text-3xl mb-xs">bolt</span>
+<span class="font-label-bold text-on-surface-variant">INTENSITÀ PRO</span>
+</div>
+<div class="col-span-2 bg-white rounded-xl p-md border-2 border-primary-container/20 flex items-center justify-around shadow-custom">
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: &quot;FILL&quot; 1;">emoji_events</span>
+<span class="text-[12px] font-bold mt-1">AGONISMO</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: &quot;FILL&quot; 1;">psychology</span>
+<span class="text-[12px] font-bold mt-1">STRATEGIA</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: &quot;FILL&quot; 1;">favorite</span>
+<span class="text-[12px] font-bold mt-1">PASSIONE</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Skills Section -->
+<section class="mt-xl">
+<h2 class="font-headline-lg text-headline-lg mb-lg text-center md:text-left">Competenze Acquisite</h2>
+<div class="flex flex-wrap gap-md justify-center md:justify-start">
+<span class="px-6 py-3 bg-secondary-fixed text-on-secondary-fixed rounded-full font-label-bold flex items-center gap-2 squishy-interaction shadow-sm">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+                    RESPONSABILITÀ
+                </span>
+<span class="px-6 py-3 bg-tertiary-fixed text-on-tertiary-fixed rounded-full font-label-bold flex items-center gap-2 squishy-interaction shadow-sm">
+<span class="material-symbols-outlined text-[18px]">timer</span>
+                    GESTIONE DEL TEMPO
+                </span>
+<span class="px-6 py-3 bg-primary-fixed text-on-primary-fixed rounded-full font-label-bold flex items-center gap-2 squishy-interaction shadow-sm">
+<span class="material-symbols-outlined text-[18px]">campaign</span>
+                    COMUNICAZIONE EFFICACE
+                </span>
+<span class="px-6 py-3 bg-surface-variant text-on-surface-variant rounded-full font-label-bold flex items-center gap-2 squishy-interaction shadow-sm border border-outline-variant">
+<span class="material-symbols-outlined text-[18px]">fitness_center</span>
+                    RESILIENZA FISICA
+                </span>
+</div>
+</section>
+<!-- Quote Area -->
+<section class="mt-xl bg-primary text-on-primary rounded-xl p-lg text-center relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+<svg height="100%" preserveAspectRatio="none" viewBox="0 0 100 100" width="100%">
+<circle cx="10" cy="10" fill="white" r="20"></circle>
+<circle cx="90" cy="80" fill="white" r="15"></circle>
+</svg>
+</div>
+<span class="material-symbols-outlined text-5xl mb-md opacity-50">format_quote</span>
+<p class="font-headline-lg italic mb-md">"La pallavolo non è solo uno sport, è imparare a cadere e rialzarsi in una frazione di secondo."</p>
+<div class="w-12 h-1 bg-white/30 mx-auto rounded-full"></div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-pink-50 border-t-2 border-pink-100 rounded-t-[48px] flex flex-col md:flex-row justify-between items-center px-12 py-16 gap-8">
+<div class="flex flex-col items-center md:items-start gap-4">
+<span class="font-black text-pink-600 text-2xl font-['Plus_Jakarta_Sans']">Design di Chiara Folci</span>
+<p class="font-['Plus_Jakarta_Sans'] text-sm font-semibold text-slate-600">© 2024 Built with Joy &amp; Pixels</p>
+</div>
+<div class="flex gap-8">
+<a class="font-['Plus_Jakarta_Sans'] text-sm font-semibold text-slate-600 hover:text-pink-500 hover:underline decoration-2 underline-offset-4 transition-colors duration-200" href="#">Projects</a>
+<a class="font-['Plus_Jakarta_Sans'] text-sm font-semibold text-pink-600 font-bold hover:text-pink-500 hover:underline decoration-2 underline-offset-4 transition-colors duration-200" href="#">Resume</a>
+<a class="font-['Plus_Jakarta_Sans'] text-sm font-semibold text-slate-600 hover:text-pink-500 hover:underline decoration-2 underline-offset-4 transition-colors duration-200" href="#">Say Hello</a>
+</div>
+</footer>
+
+
+
+
+
+
+</body></html>

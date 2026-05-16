@@ -1,0 +1,368 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="it" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed-variant": "#594400",
+                    "on-primary-container": "#fffbff",
+                    "on-surface": "#27171c",
+                    "on-primary-fixed": "#3e0020",
+                    "inverse-primary": "#ffb0cb",
+                    "surface-tint": "#b80069",
+                    "tertiary-fixed-dim": "#e9c25e",
+                    "on-error-container": "#93000a",
+                    "secondary-container": "#70d6ff",
+                    "on-tertiary-fixed": "#251a00",
+                    "error": "#ba1a1a",
+                    "secondary-fixed-dim": "#6cd3fc",
+                    "inverse-on-surface": "#ffecf0",
+                    "secondary": "#006783",
+                    "on-secondary-container": "#005c75",
+                    "inverse-surface": "#3d2c31",
+                    "primary": "#b40067",
+                    "surface-variant": "#f8dbe3",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-low": "#fff0f3",
+                    "primary-fixed-dim": "#ffb0cb",
+                    "primary-fixed": "#ffd9e3",
+                    "on-primary-container": "#ffffff",
+                    "on-tertiary-container": "#fffbff",
+                    "surface-bright": "#fff8f8",
+                    "tertiary-container": "#907010",
+                    "on-primary": "#ffffff",
+                    "surface-container-high": "#fee1e8",
+                    "on-surface-variant": "#5a3f48",
+                    "on-error": "#ffffff",
+                    "surface-container-highest": "#f8dbe3",
+                    "surface": "#fff8f8",
+                    "on-secondary-fixed": "#001f2a",
+                    "tertiary": "#735800",
+                    "primary-container": "#df0b81",
+                    "surface-container": "#ffe8ee",
+                    "surface-dim": "#efd3da",
+                    "surface-container-lowest": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed-variant": "#8d004f",
+                    "on-secondary-fixed-variant": "#004d63",
+                    "background": "#fff8f8",
+                    "on-secondary": "#ffffff",
+                    "outline": "#8d6f78",
+                    "on-background": "#27171c",
+                    "outline-variant": "#e1bdc7",
+                    "secondary-fixed": "#bce9ff",
+                    "tertiary-fixed": "#ffdf95"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "gutter": "24px",
+                    "xs": "4px",
+                    "sm": "12px",
+                    "xl": "80px",
+                    "container-max": "1200px",
+                    "lg": "48px",
+                    "md": "24px"
+            },
+            "fontFamily": {
+                    "label-bold": ["Plus Jakarta Sans"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "headline-xl": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "label-bold": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "body-md": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "500"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(12px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        .bubbly-shadow {
+            box-shadow: 0 10px 40px rgba(255, 51, 153, 0.15);
+        }
+        .timeline-line {
+            background: linear-gradient(to bottom, #df0b81 0%, #70d6ff 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background font-body-md text-on-background selection:bg-primary-fixed selection:text-on-primary-fixed" data-mode="connect">
+<header class="bg-white/60 dark:bg-gray-900/60 backdrop-blur-xl font-['Plus_Jakarta_Sans'] font-bold tracking-tight rounded-full sticky top-4 mx-4 z-50 shadow-[0_10px_40px_rgba(255,51,153,0.15)] flex justify-between items-center w-[calc(100%-2rem)] max-w-5xl md:mx-auto px-6 py-3"><button aria-label="Torna indietro" class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center bubbly-shadow hover:scale-110 active:scale-95 transition-all duration-300 shrink-0" onclick="history.back()">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center overflow-hidden border-2 border-white">
+<img class="w-full h-full object-cover" data-alt="vibrant and friendly portrait of a young creative student smiling in a brightly lit studio environment" src="https://lh3.googleusercontent.com/aida/ADBb0uiGVfv4D8hinGrYt2akA4RNsy79CQCz9_bltIq62YtDWGg8IE5xgph-nEpivKyRCeFOLmT6rBVGn_zwKSzmpetmNPUW8SAqjyHM52KClGBWHMnxQ0TxV9HNdw09FjIBYZy4U5OMDbE3ByMOQlXXN3QgQI3Dng_8TfXwPwWQ_MtP4c_WeRu2FsbkvXFsTpVUGqd4PDdmQdFyRkEEEF2H2xfGbmC5Xuh-upXmTwEraN_JCtAPeQQX74f9sz8">
+</div>
+<span class="text-2xl font-black text-pink-500 dark:text-pink-400">Chiara Folci</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-500 dark:text-slate-400 font-medium hover:scale-105 hover:bg-pink-50 dark:hover:bg-pink-900/30 transition-all duration-300 px-4 py-2 rounded-full" href="#">Progetti</a>
+<a class="text-pink-600 dark:text-pink-300 font-extrabold hover:scale-105 hover:bg-pink-50 dark:hover:bg-pink-900/30 transition-all duration-300 px-4 py-2 rounded-full" href="#">Esperienze</a>
+<a class="text-slate-500 dark:text-slate-400 font-medium hover:scale-105 hover:bg-pink-50 dark:hover:bg-pink-900/30 transition-all duration-300 px-4 py-2 rounded-full" href="#">Chi Sono</a>
+</nav>
+<button class="material-symbols-outlined text-pink-500 md:hidden" data-icon="menu">menu</button>
+<button class="hidden md:flex bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-label-bold active:scale-95 transition-transform duration-200 ease-out shadow-lg transition-all" id="contact-btn-desktop">Contattami</button>
+</header>
+<main class="max-w-container-max mx-auto px-gutter py-xl">
+<section class="text-center mb-xl">
+<span class="bg-secondary-fixed text-on-secondary-fixed px-6 py-2 rounded-full font-label-bold mb-4 inline-block bubbly-shadow">
+                IL MIO VIAGGIO PCTO
+            </span>
+<h1 class="font-headline-xl text-headline-xl text-on-surface mb-6">Esperienze che mi hanno <br><span class="text-primary">fatto brillare!</span></h1>
+<p class="max-w-2xl mx-auto text-on-surface-variant font-body-md text-body-md leading-relaxed">Dai successi sul campo da pallavolo alle sfide accademiche d'eccellenza: ecco i momenti che hanno definito il mio percorso di crescita.</p>
+</section>
+<div class="relative">
+<div class="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-2 rounded-full timeline-line hidden lg:block opacity-20"></div>
+<div class="space-y-16">
+<!-- Timeline Item 1 -->
+<div class="relative flex flex-col lg:flex-row items-center gap-12 group">
+<div class="hidden lg:flex flex-1 justify-end text-right pr-8">
+<div>
+<span class="font-headline-lg text-headline-lg text-secondary mb-2 block">2025 - 2026</span>
+<span class="bg-on-tertiary-fixed-variant text-tertiary-fixed px-4 py-1 rounded-full font-label-bold">Stagione Sportiva</span>
+</div>
+</div>
+<div class="relative z-10 w-16 h-16 rounded-full bg-primary-container border-4 border-white shadow-xl flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="sports_volleyball">sports_volleyball</span>
+</div>
+<div class="flex-1 glass-card p-10 rounded-xl bubbly-shadow group-hover:scale-[1.02] transition-transform duration-300">
+<div class="flex flex-wrap justify-between items-start gap-4 mb-6">
+<div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Pallavolo Scanzorosciate</h3>
+<p class="text-primary font-bold">Serie C Femminile</p>
+</div>
+<span class="bg-on-primary-container text-primary-container border-2 border-primary-container px-4 py-1 rounded-full font-label-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="star">star</span> in corso
+                            </span>
+</div>
+<p class="text-on-surface-variant mb-6 text-body-md">
+                            Impegno agonistico nel campionato regionale di Serie C. Sviluppo di disciplina, spirito di squadra e gestione dello stress in contesti competitivi di alto livello.
+                        </p>
+<div class="flex flex-wrap gap-3">
+<span class="bg-secondary-fixed/30 text-on-secondary-fixed px-3 py-1 rounded-full text-sm font-semibold">#Volley</span>
+<span class="bg-secondary-fixed/30 text-on-secondary-fixed px-3 py-1 rounded-full text-sm font-semibold">#SerieC</span>
+<span class="bg-secondary-fixed/30 text-on-secondary-fixed px-3 py-1 rounded-full text-sm font-semibold">#TeamSpirit</span><span class="bg-secondary-fixed/30 text-on-secondary-fixed px-3 py-1 rounded-full text-sm font-semibold">#Albero</span>
+</div>
+</div>
+</div>
+<!-- Timeline Item 2 -->
+<div class="relative flex flex-col lg:flex-row-reverse items-center gap-12 group">
+<div class="hidden lg:flex flex-1 justify-start text-left pl-8">
+<div>
+<span class="font-headline-lg text-headline-lg text-secondary mb-2 block">2025</span>
+<span class="bg-on-tertiary-fixed-variant text-tertiary-fixed px-4 py-1 rounded-full font-label-bold">Luglio</span>
+</div>
+</div>
+<div class="relative z-10 w-16 h-16 rounded-full bg-secondary-container border-4 border-white shadow-xl flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="sports_score">sports_score</span>
+</div>
+<div class="flex-1 glass-card p-10 rounded-xl bubbly-shadow group-hover:scale-[1.02] transition-transform duration-300">
+<div class="flex flex-wrap justify-between items-start gap-4 mb-6">
+<div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Camp Multisportivo</h3>
+<p class="text-secondary font-bold">Esperienza Estiva</p>
+</div>
+<span class="bg-on-primary-container text-primary-container border-2 border-primary-container px-4 py-1 rounded-full font-label-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="check_circle">check_circle</span> completato
+                            </span>
+</div>
+<p class="text-on-surface-variant mb-6 text-body-md">
+                            Partecipazione a un programma dedicato a diverse discipline sportive, con focus sul miglioramento delle capacità motorie e della socializzazione attraverso lo sport.
+                        </p>
+<div class="flex flex-wrap gap-3">
+<span class="bg-tertiary-fixed/30 text-on-tertiary-fixed px-3 py-1 rounded-full text-sm font-semibold">#Multisport</span>
+<span class="bg-tertiary-fixed/30 text-on-tertiary-fixed px-3 py-1 rounded-full text-sm font-semibold">#Estate2025</span>
+<span class="bg-tertiary-fixed/30 text-on-tertiary-fixed px-3 py-1 rounded-full text-sm font-semibold">#Leadership</span>
+</div>
+</div>
+</div>
+<!-- Timeline Item 3 -->
+<div class="relative flex flex-col lg:flex-row items-center gap-12 group">
+<div class="hidden lg:flex flex-1 justify-end text-right pr-8">
+<div>
+<span class="font-headline-lg text-headline-lg text-secondary mb-2 block">2025</span>
+<span class="bg-on-tertiary-fixed-variant text-tertiary-fixed px-4 py-1 rounded-full font-label-bold">Giugno</span>
+</div>
+</div>
+<div class="relative z-10 w-16 h-16 rounded-full bg-tertiary-container border-4 border-white shadow-xl flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="school">school</span>
+</div>
+<div class="flex-1 glass-card p-10 rounded-xl bubbly-shadow group-hover:scale-[1.02] transition-transform duration-300">
+<div class="flex flex-wrap justify-between items-start gap-4 mb-6">
+<div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Summer School Frascati</h3>
+<p class="text-tertiary font-bold">Roma, Italia</p>
+</div>
+<span class="bg-on-primary-container text-primary-container border-2 border-primary-container px-4 py-1 rounded-full font-label-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="history_edu">history_edu</span>completato</span>
+</div>
+<p class="text-on-surface-variant mb-6 text-body-md">
+                            Percorso di eccellenza accademica in un ambiente stimolante. Approfondimento di tematiche scientifiche e informatiche a contatto con ricercatori e professionisti.
+                        </p>
+<div class="flex flex-wrap gap-3">
+<span class="bg-primary-fixed/30 text-on-primary-fixed px-3 py-1 rounded-full text-sm font-semibold">#Frascati</span>
+<span class="bg-primary-fixed/30 text-on-primary-fixed px-3 py-1 rounded-full text-sm font-semibold">#Ricerca</span>
+<span class="bg-primary-fixed/30 text-on-primary-fixed px-3 py-1 rounded-full text-sm font-semibold">#AcceleratoriDiParticelle</span><span class="bg-secondary-fixed/30 text-on-secondary-fixed px-3 py-1 rounded-full text-sm font-semibold"><br></span>
+</div>
+</div>
+</div>
+<div class="relative flex flex-col lg:flex-row-reverse items-center gap-12 group">
+<div class="hidden lg:flex flex-1 justify-start text-left pl-8">
+<div>
+<span class="font-headline-lg text-headline-lg text-secondary mb-2 block">2023 - 2024</span>
+<span class="bg-on-tertiary-fixed-variant text-tertiary-fixed px-4 py-1 rounded-full font-label-bold">Inclusione Sportiva</span>
+</div>
+</div>
+<div class="relative z-10 w-16 h-16 rounded-full bg-primary border-4 border-white shadow-xl flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="diversity_3">diversity_3</span>
+</div>
+<div class="flex-1 glass-card p-10 rounded-xl bubbly-shadow group-hover:scale-[1.02] transition-transform duration-300">
+<div class="flex flex-wrap justify-between items-start gap-4 mb-6">
+<div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Special Team Unificato</h3>
+<p class="text-pink-600 font-bold">Volley Bergamo 1991</p>
+</div>
+<span class="bg-on-primary-container text-primary-container border-2 border-primary-container px-4 py-1 rounded-full font-label-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="favorite">favorite</span> completato</span>
+</div>
+<p class="text-on-surface-variant mb-6 text-body-md">
+                            Esperienza formativa di sport unificato, dove atleti con e senza disabilità giocano insieme. Un percorso basato sull'inclusione, il rispetto e la gioia della condivisione.
+                        </p>
+<div class="flex flex-wrap gap-3">
+<span class="bg-secondary-fixed/30 text-on-secondary-fixed px-3 py-1 rounded-full text-sm font-semibold">#Inclusione</span>
+<span class="bg-secondary-fixed/30 text-on-secondary-fixed px-3 py-1 rounded-full text-sm font-semibold">#VolleyBergamo</span>
+<span class="bg-secondary-fixed/30 text-on-secondary-fixed px-3 py-1 rounded-full text-sm font-semibold">#Valori</span>
+</div>
+</div>
+</div></div>
+</div>
+<!-- Skills Grid (Extra Section for richness) -->
+<section class="mt-xl">
+<div class="text-center mb-12">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Cosa porto con me</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="bg-white p-8 rounded-xl bubbly-shadow text-center">
+<div class="w-14 h-14 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4">
+<span class="material-symbols-outlined text-primary" data-icon="groups">groups</span>
+</div>
+<h4 class="font-bold text-lg mb-2">Teamwork</h4>
+<p class="text-sm text-on-surface-variant">Lavorare insieme è divertente!</p>
+</div>
+<div class="bg-white p-8 rounded-xl bubbly-shadow text-center">
+<div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+<span class="material-symbols-outlined text-secondary" data-icon="lightbulb">lightbulb</span>
+</div>
+<h4 class="font-bold text-lg mb-2">Creatività</h4>
+<p class="text-sm text-on-surface-variant">Sempre alla ricerca di nuove idee.</p>
+</div>
+<div class="bg-white p-8 rounded-xl bubbly-shadow text-center">
+<div class="w-14 h-14 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+<span class="material-symbols-outlined text-tertiary" data-icon="schedule">schedule</span>
+</div>
+<h4 class="font-bold text-lg mb-2">Organizzazione</h4>
+<p class="text-sm text-on-surface-variant">Rispetto ogni singola deadline.</p>
+</div>
+<div class="bg-white p-8 rounded-xl bubbly-shadow text-center">
+<div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+<span class="material-symbols-outlined text-purple-600" data-icon="psychology">psychology</span>
+</div>
+<h4 class="font-bold text-lg mb-2">Problem Solving</h4>
+<p class="text-sm text-on-surface-variant">Nessun bug mi spaventa.</p>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-pink-50 dark:bg-slate-950 full-width rounded-t-[48px] border-t-2 border-pink-100 dark:border-pink-900/30 w-full flex flex-col md:flex-row justify-between items-center px-12 py-16 gap-8">
+<div class="flex flex-col items-center md:items-start gap-4">
+<span class="font-black text-pink-600 text-2xl">Design di Chiara Folci</span>
+<p class="font-['Plus_Jakarta_Sans'] text-sm font-semibold text-slate-600 dark:text-slate-400">© 2024 Built with Joy &amp; Pixels</p>
+</div>
+<div class="flex gap-8">
+<a class="font-['Plus_Jakarta_Sans'] text-sm font-semibold text-slate-600 dark:text-slate-400 hover:text-pink-500 hover:underline decoration-2 underline-offset-4 transition-colors duration-200" href="#">Projects</a>
+<a class="font-['Plus_Jakarta_Sans'] text-sm font-semibold text-pink-600 dark:text-pink-400 font-bold hover:text-pink-500 hover:underline decoration-2 underline-offset-4 transition-colors duration-200" href="#">Resume</a>
+<a class="font-['Plus_Jakarta_Sans'] text-sm font-semibold text-slate-600 dark:text-slate-400 hover:text-pink-500 hover:underline decoration-2 underline-offset-4 transition-colors duration-200" href="#">Say Hello</a>
+</div>
+<div class="flex gap-4">
+<button class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-pink-600 shadow-md hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" data-icon="alternate_email">alternate_email</span>
+</button>
+<button class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-pink-600 shadow-md hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</button>
+</div>
+</footer>
+<!-- FAB for quick contact -->
+<div class="fixed bottom-8 right-8 z-50 lg:hidden">
+<button class="w-16 h-16 rounded-full bg-primary-container text-on-primary-container shadow-2xl flex items-center justify-center active:scale-90 transition-transform transition-all" id="contact-btn-mobile">
+<span class="material-symbols-outlined text-3xl" data-icon="send">send</span>
+</button>
+</div>
+<script>
+  const handleContactClick = (btnId) => {
+    const btn = document.getElementById(btnId);
+    if (!btn) return;
+    
+    const originalContent = btn.innerHTML;
+    const isMobile = btnId === 'contact-btn-mobile';
+
+    // Set loading state
+    btn.disabled = true;
+    btn.classList.add('opacity-80', 'cursor-not-allowed');
+    
+    if (isMobile) {
+      btn.innerHTML = '<span class="material-symbols-outlined animate-spin text-3xl">progress_activity</span>';
+    } else {
+      btn.innerHTML = '<div class="flex items-center gap-2"><span class="material-symbols-outlined animate-spin text-sm">progress_activity</span>Invio in corso...</div>';
+    }
+
+    // Simulate network request
+    setTimeout(() => {
+      if (isMobile) {
+        btn.innerHTML = '<span class="material-symbols-outlined text-3xl">check_circle</span>';
+      } else {
+        btn.innerHTML = '<div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">check_circle</span>Inviato!</div>';
+      }
+      
+      // Reset after success message
+      setTimeout(() => {
+        btn.innerHTML = originalContent;
+        btn.disabled = false;
+        btn.classList.remove('opacity-80', 'cursor-not-allowed');
+      }, 2000);
+    }, 1500);
+  };
+
+  document.getElementById('contact-btn-desktop')?.addEventListener('click', () => handleContactClick('contact-btn-desktop'));
+  document.getElementById('contact-btn-mobile')?.addEventListener('click', () => handleContactClick('contact-btn-mobile'));
+</script>
+
+
+
+</body></html>
