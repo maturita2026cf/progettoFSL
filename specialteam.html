@@ -1,9 +1,9 @@
 <!DOCTYPE html><html lang="it"><head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Special Team - Chiara Folci</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <script id="tailwind-config">
         tailwind.config = {
@@ -11,230 +11,138 @@
             theme: {
                 extend: {
                     "colors": {
-                        "on-primary-container": "#fffbff",
-                        "on-tertiary-container": "#fffbff",
-                        "error-container": "#ffdad6",
-                        "surface-container": "#ffe8ee",
-                        "surface-variant": "#f8dbe3",
-                        "surface-container-lowest": "#ffffff",
-                        "outline": "#8d6f78",
-                        "surface": "#fff8f8",
-                        "inverse-surface": "#3d2c31",
-                        "tertiary-container": "#907010",
-                        "on-tertiary-fixed-variant": "#594400",
-                        "on-error": "#ffffff",
-                        "tertiary-fixed-dim": "#e9c25e",
-                        "on-secondary-fixed": "#001f2a",
-                        "secondary-fixed-dim": "#6cd3fc",
-                        "primary-container": "#df0b81",
-                        "secondary": "#006783",
-                        "on-error-container": "#93000a",
-                        "on-tertiary-fixed": "#251a00",
-                        "primary-fixed": "#ffd9e3",
-                        "tertiary-fixed": "#ffdf95",
-                        "on-secondary-container": "#005c75",
-                        "inverse-primary": "#ffb0cb",
-                        "primary-fixed-dim": "#ffb0cb",
-                        "outline-variant": "#e1bdc7",
-                        "surface-dim": "#efd3da",
-                        "on-tertiary": "#ffffff",
-                        "surface-tint": "#b80069",
-                        "on-surface-variant": "#5a3f48",
-                        "error": "#ba1a1a",
-                        "surface-container-highest": "#f8dbe3",
-                        "secondary-fixed": "#bce9ff",
                         "primary": "#b40067",
-                        "tertiary": "#735800",
-                        "on-primary-fixed-variant": "#8d004f",
+                        "secondary": "#006783",
                         "background": "#fff8f8",
-                        "surface-container-high": "#fee1e8",
-                        "secondary-container": "#70d6ff",
-                        "on-surface": "#27171c",
-                        "on-background": "#27171c",
-                        "surface-container-low": "#fff0f3",
-                        "inverse-on-surface": "#ffecf0",
-                        "on-primary": "#ffffff",
-                        "surface-bright": "#fff8f8",
-                        "on-secondary-fixed-variant": "#004d63",
-                        "on-secondary": "#ffffff",
-                        "on-primary-fixed": "#3e0020"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "1rem",
-                        "lg": "2rem",
-                        "xl": "3rem",
-                        "full": "9999px"
-                    },
-                    "spacing": {
-                        "container-max": "1200px",
-                        "base": "8px",
-                        "md": "24px",
-                        "gutter": "24px",
-                        "xs": "4px",
-                        "lg": "48px",
-                        "xl": "80px",
-                        "sm": "12px"
-                    },
-                    "fontFamily": {
-                        "headline-lg": ["Plus Jakarta Sans"],
-                        "body-md": ["Plus Jakarta Sans"],
-                        "label-bold": ["Plus Jakarta Sans"],
-                        "headline-xl": ["Plus Jakarta Sans"]
-                    },
-                    "fontSize": {
-                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
-                        "body-md": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "500"}],
-                        "label-bold": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "700"}],
-                        "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+                        "surface": "#ffffff"
                     }
-                },
-            },
+                }
+            }
         }
     </script>
 <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.6);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-        }
-    </style>
+    body {
+        background: radial-gradient(circle at top right, rgba(112, 214, 255, 0.1), transparent),
+                    radial-gradient(circle at bottom left, rgba(223, 11, 129, 0.05), #fff8f8);
+    }
+    .glass-effect {
+        background: rgba(255, 255, 255, 0.75);
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+    .hover-lift {
+        transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+    }
+    .hover-lift:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    }
+</style>
 </head>
-<body class="bg-background font-body-md text-on-background min-h-screen">
-<!-- TopAppBar -->
-<header class="bg-white/60 dark:bg-gray-900/60 backdrop-blur-xl rounded-full sticky top-4 mx-4 z-50 shadow-[0_10px_40px_rgba(255,51,153,0.15)] flex justify-between items-center w-[calc(100%-2rem)] max-w-5xl md:mx-auto px-6 py-3 md:gap-4"><button aria-label="Indietro" class="material-symbols-outlined text-pink-500 hover:scale-110 active:scale-90 transition-all duration-300 p-2 -ml-2">chevron_left</button>
-<div class="flex items-center gap-2">
-<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center overflow-hidden">
-<img alt="student profile photo" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uiGVfv4D8hinGrYt2akA4RNsy79CQCz9_bltIq62YtDWGg8IE5xgph-nEpivKyRCeFOLmT6rBVGn_zwKSzmpetmNPUW8SAqjyHM52KClGBWHMnxQ0TxV9HNdw09FjIBYZy4U5OMDbE3ByMOQlXXN3QgQI3Dng_8TfXwPwWQ_MtP4c_WeRu2FsbkvXFsTpVUGqd4PDdmQdFyRkEEEF2H2xfGbmC5Xuh-upXmTwEraN_JCtAPeQQX74f9sz8">
-</div>
-<span class="text-2xl font-black text-pink-500 dark:text-pink-400 font-headline-lg">Chiara Folci</span>
-</div>
-<nav class="hidden md:flex gap-6">
-<a class="text-pink-600 dark:text-pink-300 font-extrabold hover:scale-105 transition-all duration-300" href="#">Esperienze</a>
-<a class="text-slate-500 dark:text-slate-400 font-medium hover:scale-105 hover:bg-pink-50 transition-all duration-300 px-3 py-1 rounded-full" href="#">Progetti</a>
-<a class="text-slate-500 dark:text-slate-400 font-medium hover:scale-105 hover:bg-pink-50 transition-all duration-300 px-3 py-1 rounded-full" href="#">Contatti</a>
-</nav>
-<button class="material-symbols-outlined text-pink-500 hover:scale-105 transition-all duration-300">menu</button>
+<body class="text-[#27171c] font-['Plus_Jakarta_Sans'] min-h-screen">
+
+<header class="max-w-6xl mx-auto px-6 py-8 flex justify-between items-center">
+    <button class="w-12 h-12 rounded-full bg-white shadow-xl flex items-center justify-center text-primary hover:scale-110 active:scale-95 transition-all" onclick="history.back()">
+        <span class="material-symbols-outlined font-bold">arrow_back</span>
+    </button>
+    <div class="flex items-center gap-4 glass-effect px-5 py-2 rounded-full shadow-sm">
+        <div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary/20">
+            <img alt="Chiara Folci" class="w-full h-full object-cover" src="fotogenerata.png">
+        </div>
+        <span class="text-lg font-extrabold text-primary">Chiara Folci</span>
+    </div>
 </header>
-<main class="max-w-5xl mx-auto px-6 pt-xl pb-xl">
-<!-- Hero Section -->
-<section class="mb-xl text-center">
-<div class="inline-block px-6 py-2 bg-secondary-container text-on-secondary-container rounded-full font-label-bold mb-md shadow-sm">
-                PCTO 2023 - 2024
+
+<main class="max-w-6xl mx-auto px-6 pb-24">
+    <section class="flex flex-col lg:flex-row gap-12 items-center py-10">
+        <div class="flex-1 space-y-8 text-center lg:text-left">
+            <div class="inline-flex items-center gap-2 bg-primary/10 text-primary px-6 py-2 rounded-full font-bold text-sm tracking-widest uppercase">
+                🏆 Esperienza Sportiva
             </div>
-<h1 class="font-headline-xl text-headline-xl text-primary mb-md">Special Team Unificato</h1>
-<p class="max-w-2xl mx-auto text-on-surface-variant font-body-md text-body-md">
-                Un'esperienza immersiva nel cuore dello sport inclusivo presso il <span class="font-bold text-secondary">Volley Bergamo 1991</span>, dove la diversità diventa il punto di forza della squadra.
+            
+            <h1 class="text-6xl md:text-8xl font-black tracking-tighter leading-none">
+                Special <br><span class="text-secondary">Team</span>
+            </h1>
+            
+            <p class="text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                Un'esperienza di volontariato e supporto sportivo dedicata all'inclusione, dove il gioco di squadra diventa uno strumento per superare ogni barriera.
             </p>
-</section>
-<!-- Bento Grid Layout -->
-<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
-<!-- Main Content Card -->
-<div class="md:col-span-8 glass-card rounded-xl p-lg shadow-[0_10px_40px_rgba(255,51,153,0.1)] border-2 border-white/40">
-<div class="flex items-center gap-sm mb-md">
-<span class="material-symbols-outlined text-primary text-4xl" data-weight="fill">favorite</span>
-<h2 class="font-headline-lg text-headline-lg text-on-surface">Il Nostro Focus</h2>
-</div>
-<p class="text-on-surface-variant leading-relaxed mb-lg">
-                    Il progetto Special Team Unificato non è solo allenamento, ma un percorso di crescita umana. Abbiamo lavorato fianco a fianco con atleti con disabilità, abbattendo barriere architettoniche e mentali attraverso il gioco della pallavolo. Ogni set è stato un'occasione per imparare il vero significato di resilienza e collaborazione.
-                </p>
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-md">
-<div class="p-md bg-surface-container-low rounded-lg border-b-4 border-primary">
-<span class="material-symbols-outlined text-primary mb-xs" data-weight="fill">groups</span>
-<h3 class="font-label-bold text-on-surface mb-xs">Inclusione Totale</h3>
-<p class="text-sm text-on-surface-variant">Integrazione di atleti con e senza disabilità in un unico team competitivo.</p>
-</div>
-<div class="p-md bg-surface-container-low rounded-lg border-b-4 border-secondary">
-<span class="material-symbols-outlined text-secondary mb-xs" data-weight="fill">celebration</span>
-<h3 class="font-label-bold text-on-surface mb-xs">Gioia Condivisa</h3>
-<p class="text-sm text-on-surface-variant">Celebrazione di ogni successo, dal punto segnato alla crescita personale.</p>
-</div>
-</div>
-</div>
-<!-- Location & Stats Card -->
-<div class="md:col-span-4 space-y-gutter">
-<div class="bg-white rounded-xl overflow-hidden shadow-[0_10px_40px_rgba(255,51,153,0.1)] border-2 border-white">
-<div class="h-48 relative">
-<img alt="Foto del gruppo Special Team Unificato sul campo da pallavolo" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0ujhHuIz5f6cLa37bHo703sJyOcwy4DfD9pR3AaATwe9T6KRJzk2qVnC-CEBAr9KMP4fkL1I3Gp8980dTPABY_NMUHvnBq2Js2Flj1_Gqi8wwq8L7gZR5Ym_bNcYnWhiZqF9P-WeOFfYXNidni8V7K59q24ez_4IYOcUjjy0n5GfaCTcF6roZWiCsMJ1WFm-KfvItZEwYIYzTGRReUXn5ZrI4zZYvKN2xdEKBK5qIOeYtM-8J99KmeVpe0Sbd1TlrtrFL8jjF4Cnaw">
-<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-md">
-<div class="text-white">
-<p class="text-xs font-bold uppercase tracking-widest opacity-80">Sede</p>
-<p class="font-bold">Volley Bergamo 1991</p>
-</div>
-</div>
-</div>
-<div class="p-md bg-surface-container-lowest">
-<div class="flex items-center gap-sm text-on-surface-variant">
-<span class="material-symbols-outlined text-secondary">location_on</span>
-<span class="text-sm" data-location="Bergamo, Italy">Bergamo, IT</span>
-</div>
-</div>
-</div>
-<div class="glass-card rounded-xl p-md shadow-[0_10px_40px_rgba(255,51,153,0.1)] flex flex-col gap-sm">
-<h3 class="font-label-bold text-primary">Competenze Sviluppate</h3>
-<div class="flex flex-wrap gap-xs">
-<span class="px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed rounded-full text-xs font-bold">Empatia</span>
-<span class="px-3 py-1 bg-secondary-fixed text-on-secondary-fixed rounded-full text-xs font-bold">Teamwork</span>
-<span class="px-3 py-1 bg-primary-fixed text-on-primary-fixed rounded-full text-xs font-bold">Adattabilità</span>
-<span class="px-3 py-1 bg-surface-variant text-on-surface-variant rounded-full text-xs font-bold">Leadership Inclusiva</span>
-</div>
-</div>
-</div>
-<!-- Quote/Impact Card -->
-<div class="md:col-span-12 relative overflow-hidden bg-primary p-lg rounded-xl text-on-primary shadow-xl">
-<div class="absolute -right-12 -top-12 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
-<div class="relative z-10 flex flex-col md:flex-row items-center gap-lg">
-<div class="text-center md:text-left flex-1">
-<span class="material-symbols-outlined text-5xl mb-sm" data-weight="fill">format_quote</span>
-<blockquote class="text-headline-lg font-headline-lg mb-md leading-tight">
-                            "UNO DUE TRE ADESSO TOCCA A ME"</blockquote>
-<p class="font-label-bold opacity-80">— il nostro motto</p>
-</div>
-<div class="hidden md:block">
-<span class="material-symbols-outlined text-[120px] opacity-20" data-weight="fill">diversity_1</span>
-</div>
-</div>
-</div>
-<!-- Gallery/Visual Grid -->
-<div class="md:col-span-6 bg-surface-container-high rounded-xl p-md flex flex-col justify-center items-center gap-md border-2 border-white/60">
-<div class="w-20 h-20 bg-primary text-white rounded-full flex items-center justify-center shadow-lg transform hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-4xl" data-weight="fill">volunteer_activism</span>
-</div>
-<h4 class="font-headline-lg text-primary">Inclusione</h4>
-<p class="text-center text-sm text-on-surface-variant px-md">Un cuore che batte all'unisono per ogni membro del team, senza distinzioni di abilità.</p>
-</div>
-<div class="md:col-span-6 bg-secondary-container/30 rounded-xl p-md flex flex-col justify-center items-center gap-md border-2 border-white/60">
-<div class="w-20 h-20 bg-secondary text-white rounded-full flex items-center justify-center shadow-lg transform hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-4xl" data-weight="fill">handshake</span>
-</div>
-<h4 class="font-headline-lg text-secondary">Rispetto</h4>
-<p class="text-center text-sm text-on-surface-variant px-md">Costruire ponti di comprensione reciproca attraverso il sudore e la fatica in campo.</p>
-</div>
-</div>
-<!-- Back Button -->
-<div class="mt-xl flex justify-center">
-<button class="group px-xl py-md bg-primary text-white rounded-full font-label-bold flex items-center gap-sm shadow-lg hover:scale-105 active:scale-95 transition-all duration-300">
-<span class="material-symbols-outlined">arrow_back</span>
-                TUTTE LE ESPERIENZE
-            </button>
-</div>
+        </div>
+
+        <div class="flex-1 w-full max-w-lg">
+            <div class="relative group">
+                <div class="absolute -inset-4 bg-gradient-to-tr from-primary to-secondary rounded-[3rem] opacity-20 blur-2xl group-hover:opacity-30 transition-opacity"></div>
+                <img src="specialolympics.jpg" alt="Special Olympics" class="relative w-full h-[450px] object-cover rounded-[2.5rem] shadow-2xl hover-lift border-8 border-white">
+            </div>
+        </div>
+    </section>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-12">
+        <div class="lg:col-span-2">
+            <div class="glass-effect p-8 md:p-12 rounded-[2.5rem] shadow-xl">
+                <h2 class="text-3xl font-black mb-8 flex items-center gap-3 text-primary">
+                    <span class="material-symbols-outlined text-4xl">volunteer_activism</span> 
+                    Descrizione Attività
+                </h2>
+                <div class="prose prose-slate lg:prose-xl">
+                    <p class="text-lg text-slate-700 leading-relaxed">
+                        Durante questa esperienza ho affiancato gli atleti nelle sessioni di allenamento e durante le competizioni. Mi sono occupata dell'incoraggiamento costante, dell'organizzazione dei materiali e del supporto tecnico ai coach, vivendo momenti di grande emozione e crescita personale.
+                    </p>
+                </div>
+                
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                    <div class="bg-white/50 p-6 rounded-2xl border border-white">
+                        <span class="material-symbols-outlined text-secondary block mb-2">location_on</span>
+                        <p class="font-bold text-slate-800">Sede</p>
+                        <p class="text-slate-500 italic text-xs">Volley Bergamo 1991</p>
+                    </div>
+                    <div class="bg-white/50 p-6 rounded-2xl border border-white">
+                        <span class="material-symbols-outlined text-secondary block mb-2">event_available</span>
+                        <p class="font-bold text-slate-800">Periodo</p>
+                        <p class="text-slate-500 italic text-xs">Anno scolastico 2023/2024</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="space-y-8">
+            <div class="bg-secondary p-10 rounded-[2.5rem] shadow-2xl text-white transform md:rotate-2 hover:rotate-0 transition-transform">
+                <h3 class="text-2xl font-black mb-8 border-b border-white/20 pb-4">Skills Acquisite</h3>
+                <ul class="space-y-6">
+                    <li class="flex items-center gap-4 group">
+                        <span class="material-symbols-outlined bg-white/20 p-2 rounded-xl group-hover:bg-white group-hover:text-secondary transition-colors font-bold">diversity_1</span>
+                        <span class="font-bold text-lg">Empatia</span>
+                    </li>
+                    <li class="flex items-center gap-4 group">
+                        <span class="material-symbols-outlined bg-white/20 p-2 rounded-xl group-hover:bg-white group-hover:text-secondary transition-colors font-bold">support_agent</span>
+                        <span class="font-bold text-lg">Supporto</span>
+                    </li>
+                    <li class="flex items-center gap-4 group">
+                        <span class="material-symbols-outlined bg-white/20 p-2 rounded-xl group-hover:bg-white group-hover:text-secondary transition-colors font-bold">sports_handball</span>
+                        <span class="font-bold text-lg">Coaching</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="glass-effect p-8 rounded-[2.5rem] text-center border-dashed border-2 border-slate-200">
+                <span class="material-symbols-outlined text-5xl text-primary mb-4">stars</span>
+                <p class="font-black text-slate-700 uppercase tracking-tighter">Ogni limite è una sfida</p>
+            </div>
+        </div>
+    </div>
 </main>
-<!-- Footer -->
-<footer class="bg-pink-50 dark:bg-slate-950 full-width rounded-t-[48px] border-t-2 border-pink-100 dark:border-pink-900/30 w-full flex flex-col md:flex-row justify-between items-center px-12 py-16 gap-8">
-<div class="flex flex-col items-center md:items-start gap-2">
-<span class="font-black text-pink-600 text-xl font-headline-lg">Design di Chiara Folci</span>
-<p class="font-['Plus_Jakarta_Sans'] text-sm font-semibold text-slate-600 dark:text-slate-400">© 2024 Built with Joy &amp; Pixels</p>
-</div>
-<div class="flex gap-8">
-<a class="font-['Plus_Jakarta_Sans'] text-sm font-semibold text-slate-600 dark:text-slate-400 hover:text-pink-500 hover:underline decoration-2 underline-offset-4 transition-colors duration-200" href="#">Projects</a>
-<a class="font-['Plus_Jakarta_Sans'] text-sm font-semibold text-slate-600 dark:text-slate-400 hover:text-pink-500 hover:underline decoration-2 underline-offset-4 transition-colors duration-200" href="#">Resume</a>
-<a class="font-['Plus_Jakarta_Sans'] text-sm font-semibold text-pink-600 dark:text-pink-400 font-bold hover:text-pink-500 hover:underline decoration-2 underline-offset-4 transition-colors duration-200" href="#">Say Hello</a>
-</div>
+
+<footer class="bg-white/80 backdrop-blur-md border-t border-slate-100 py-16 px-6">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+        <div class="text-center md:text-left">
+            <span class="font-black text-primary text-2xl">Design di Chiara Folci</span>
+            <p class="text-slate-400 text-sm font-medium mt-1">© 2024 Built with Joy & Pixels</p>
+        </div>
+        <nav class="flex gap-10">
+            <a href="esperienze.html" class="text-sm font-bold text-slate-600 hover:text-primary transition-all">PROJECTS</a>
+            <a href="index.html" class="text-sm font-bold text-slate-600 hover:text-primary transition-all">HOME</a>
+        </nav>
+    </div>
 </footer>
-
-
-
 
 </body></html>

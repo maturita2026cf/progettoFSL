@@ -2,9 +2,8 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
 <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
@@ -117,14 +116,14 @@
 </button>
 <div class="flex items-center gap-3">
 <div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center overflow-hidden border-2 border-white">
-<img class="w-full h-full object-cover" data-alt="vibrant and friendly portrait of a young creative student smiling in a brightly lit studio environment" src="https://lh3.googleusercontent.com/aida/ADBb0uiGVfv4D8hinGrYt2akA4RNsy79CQCz9_bltIq62YtDWGg8IE5xgph-nEpivKyRCeFOLmT6rBVGn_zwKSzmpetmNPUW8SAqjyHM52KClGBWHMnxQ0TxV9HNdw09FjIBYZy4U5OMDbE3ByMOQlXXN3QgQI3Dng_8TfXwPwWQ_MtP4c_WeRu2FsbkvXFsTpVUGqd4PDdmQdFyRkEEEF2H2xfGbmC5Xuh-upXmTwEraN_JCtAPeQQX74f9sz8">
+<img class="w-full h-full object-cover" alt="Ritratto cartoon 3D di Chiara Folci" src="fotogenerata.png">
 </div>
 <span class="text-2xl font-black text-pink-500 dark:text-pink-400">Chiara Folci</span>
 </div>
 <nav class="hidden md:flex items-center gap-8">
-<a class="text-slate-500 dark:text-slate-400 font-medium hover:scale-105 hover:bg-pink-50 dark:hover:bg-pink-900/30 transition-all duration-300 px-4 py-2 rounded-full" href="#">Progetti</a>
-<a class="text-pink-600 dark:text-pink-300 font-extrabold hover:scale-105 hover:bg-pink-50 dark:hover:bg-pink-900/30 transition-all duration-300 px-4 py-2 rounded-full" href="#">Esperienze</a>
-<a class="text-slate-500 dark:text-slate-400 font-medium hover:scale-105 hover:bg-pink-50 dark:hover:bg-pink-900/30 transition-all duration-300 px-4 py-2 rounded-full" href="#">Chi Sono</a>
+<a class="text-slate-500 dark:text-slate-400 font-medium hover:scale-105 hover:bg-pink-50 dark:hover:bg-pink-900/30 transition-all duration-300 px-4 py-2 rounded-full" href="esperienze.html">Progetti</a>
+<a class="text-pink-600 dark:text-pink-300 font-extrabold hover:scale-105 hover:bg-pink-50 dark:hover:bg-pink-900/30 transition-all duration-300 px-4 py-2 rounded-full" href="esperienze.html">Esperienze</a>
+<a class="text-slate-500 dark:text-slate-400 font-medium hover:scale-105 hover:bg-pink-50 dark:hover:bg-pink-900/30 transition-all duration-300 px-4 py-2 rounded-full" href="index.html">Chi Sono</a>
 </nav>
 <button class="material-symbols-outlined text-pink-500 md:hidden" data-icon="menu">menu</button>
 <button class="hidden md:flex bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-label-bold active:scale-95 transition-transform duration-200 ease-out shadow-lg transition-all" id="contact-btn-desktop">Contattami</button>
@@ -140,7 +139,6 @@
 <div class="relative">
 <div class="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-2 rounded-full timeline-line hidden lg:block opacity-20"></div>
 <div class="space-y-16">
-<!-- Timeline Item 1 -->
 <div class="relative flex flex-col lg:flex-row items-center gap-12 group">
 <div class="hidden lg:flex flex-1 justify-end text-right pr-8">
 <div>
@@ -154,7 +152,9 @@
 <div class="flex-1 glass-card p-10 rounded-xl bubbly-shadow group-hover:scale-[1.02] transition-transform duration-300">
 <div class="flex flex-wrap justify-between items-start gap-4 mb-6">
 <div>
-<h3 class="font-headline-lg text-headline-lg text-on-surface">Pallavolo Scanzorosciate</h3>
+<a href="scanzorosciate.html" class="hover:text-primary transition-colors">
+    <h3 class="font-headline-lg text-headline-lg text-on-surface">Pallavolo Scanzorosciate</h3>
+</a>
 <p class="text-primary font-bold">Serie C Femminile</p>
 </div>
 <span class="bg-on-primary-container text-primary-container border-2 border-primary-container px-4 py-1 rounded-full font-label-bold flex items-center gap-2">
@@ -171,7 +171,6 @@
 </div>
 </div>
 </div>
-<!-- Timeline Item 2 -->
 <div class="relative flex flex-col lg:flex-row-reverse items-center gap-12 group">
 <div class="hidden lg:flex flex-1 justify-start text-left pl-8">
 <div>
@@ -185,7 +184,9 @@
 <div class="flex-1 glass-card p-10 rounded-xl bubbly-shadow group-hover:scale-[1.02] transition-transform duration-300">
 <div class="flex flex-wrap justify-between items-start gap-4 mb-6">
 <div>
-<h3 class="font-headline-lg text-headline-lg text-on-surface">Camp Multisportivo</h3>
+<a href="camp.html" class="hover:text-secondary transition-colors">
+    <h3 class="font-headline-lg text-headline-lg text-on-surface">Camp Multisportivo</h3>
+</a>
 <p class="text-secondary font-bold">Esperienza Estiva</p>
 </div>
 <span class="bg-on-primary-container text-primary-container border-2 border-primary-container px-4 py-1 rounded-full font-label-bold flex items-center gap-2">
@@ -202,7 +203,6 @@
 </div>
 </div>
 </div>
-<!-- Timeline Item 3 -->
 <div class="relative flex flex-col lg:flex-row items-center gap-12 group">
 <div class="hidden lg:flex flex-1 justify-end text-right pr-8">
 <div>
@@ -216,7 +216,9 @@
 <div class="flex-1 glass-card p-10 rounded-xl bubbly-shadow group-hover:scale-[1.02] transition-transform duration-300">
 <div class="flex flex-wrap justify-between items-start gap-4 mb-6">
 <div>
-<h3 class="font-headline-lg text-headline-lg text-on-surface">Summer School Frascati</h3>
+<a href="frascati.html" class="hover:text-tertiary transition-colors">
+    <h3 class="font-headline-lg text-headline-lg text-on-surface">Summer School Frascati</h3>
+</a>
 <p class="text-tertiary font-bold">Roma, Italia</p>
 </div>
 <span class="bg-on-primary-container text-primary-container border-2 border-primary-container px-4 py-1 rounded-full font-label-bold flex items-center gap-2">
@@ -245,7 +247,9 @@
 <div class="flex-1 glass-card p-10 rounded-xl bubbly-shadow group-hover:scale-[1.02] transition-transform duration-300">
 <div class="flex flex-wrap justify-between items-start gap-4 mb-6">
 <div>
-<h3 class="font-headline-lg text-headline-lg text-on-surface">Special Team Unificato</h3>
+<a href="specialteam.html" class="hover:text-primary transition-colors">
+    <h3 class="font-headline-lg text-headline-lg text-on-surface">Special Team Unificato</h3>
+</a>
 <p class="text-pink-600 font-bold">Volley Bergamo 1991</p>
 </div>
 <span class="bg-on-primary-container text-primary-container border-2 border-primary-container px-4 py-1 rounded-full font-label-bold flex items-center gap-2">
@@ -262,7 +266,6 @@
 </div>
 </div></div>
 </div>
-<!-- Skills Grid (Extra Section for richness) -->
 <section class="mt-xl">
 <div class="text-center mb-12">
 <h2 class="font-headline-lg text-headline-lg text-on-surface">Cosa porto con me</h2>
@@ -302,11 +305,11 @@
 <footer class="bg-pink-50 dark:bg-slate-950 full-width rounded-t-[48px] border-t-2 border-pink-100 dark:border-pink-900/30 w-full flex flex-col md:flex-row justify-between items-center px-12 py-16 gap-8">
 <div class="flex flex-col items-center md:items-start gap-4">
 <span class="font-black text-pink-600 text-2xl">Design di Chiara Folci</span>
-<p class="font-['Plus_Jakarta_Sans'] text-sm font-semibold text-slate-600 dark:text-slate-400">© 2024 Built with Joy &amp; Pixels</p>
+<p class="font-['Plus_Jakarta_Sans'] text-sm font-semibold text-slate-600 dark:text-slate-400">© 2024 Built with Joy & Pixels</p>
 </div>
 <div class="flex gap-8">
-<a class="font-['Plus_Jakarta_Sans'] text-sm font-semibold text-slate-600 dark:text-slate-400 hover:text-pink-500 hover:underline decoration-2 underline-offset-4 transition-colors duration-200" href="#">Projects</a>
-<a class="font-['Plus_Jakarta_Sans'] text-sm font-semibold text-pink-600 dark:text-pink-400 font-bold hover:text-pink-500 hover:underline decoration-2 underline-offset-4 transition-colors duration-200" href="#">Resume</a>
+<a class="font-['Plus_Jakarta_Sans'] text-sm font-semibold text-slate-600 dark:text-slate-400 hover:text-pink-500 hover:underline decoration-2 underline-offset-4 transition-colors duration-200" href="esperienze.html">Projects</a>
+<a class="font-['Plus_Jakarta_Sans'] text-sm font-semibold text-pink-600 dark:text-pink-400 font-bold hover:text-pink-500 hover:underline decoration-2 underline-offset-4 transition-colors duration-200" href="esperienze.html">Resume</a>
 <a class="font-['Plus_Jakarta_Sans'] text-sm font-semibold text-slate-600 dark:text-slate-400 hover:text-pink-500 hover:underline decoration-2 underline-offset-4 transition-colors duration-200" href="#">Say Hello</a>
 </div>
 <div class="flex gap-4">
@@ -318,39 +321,25 @@
 </button>
 </div>
 </footer>
-<!-- FAB for quick contact -->
-<div class="fixed bottom-8 right-8 z-50 lg:hidden">
-<button class="w-16 h-16 rounded-full bg-primary-container text-on-primary-container shadow-2xl flex items-center justify-center active:scale-90 transition-transform transition-all" id="contact-btn-mobile">
-<span class="material-symbols-outlined text-3xl" data-icon="send">send</span>
-</button>
-</div>
 <script>
   const handleContactClick = (btnId) => {
     const btn = document.getElementById(btnId);
     if (!btn) return;
-    
     const originalContent = btn.innerHTML;
     const isMobile = btnId === 'contact-btn-mobile';
-
-    // Set loading state
     btn.disabled = true;
     btn.classList.add('opacity-80', 'cursor-not-allowed');
-    
     if (isMobile) {
       btn.innerHTML = '<span class="material-symbols-outlined animate-spin text-3xl">progress_activity</span>';
     } else {
       btn.innerHTML = '<div class="flex items-center gap-2"><span class="material-symbols-outlined animate-spin text-sm">progress_activity</span>Invio in corso...</div>';
     }
-
-    // Simulate network request
     setTimeout(() => {
       if (isMobile) {
         btn.innerHTML = '<span class="material-symbols-outlined text-3xl">check_circle</span>';
       } else {
         btn.innerHTML = '<div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">check_circle</span>Inviato!</div>';
       }
-      
-      // Reset after success message
       setTimeout(() => {
         btn.innerHTML = originalContent;
         btn.disabled = false;
@@ -358,11 +347,7 @@
       }, 2000);
     }, 1500);
   };
-
   document.getElementById('contact-btn-desktop')?.addEventListener('click', () => handleContactClick('contact-btn-desktop'));
   document.getElementById('contact-btn-mobile')?.addEventListener('click', () => handleContactClick('contact-btn-mobile'));
 </script>
-
-
-
 </body></html>

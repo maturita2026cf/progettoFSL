@@ -1,8 +1,8 @@
 <!DOCTYPE html><html lang="it"><head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Summer School Frascati - PCTO</title>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script id="tailwind-config">
@@ -11,248 +11,131 @@
             theme: {
                 extend: {
                     "colors": {
-                        "on-primary-container": "#fffbff",
-                        "on-tertiary-container": "#fffbff",
-                        "error-container": "#ffdad6",
-                        "surface-container": "#ffe8ee",
-                        "surface-variant": "#f8dbe3",
-                        "surface-container-lowest": "#ffffff",
-                        "outline": "#8d6f78",
-                        "surface": "#fff8f8",
-                        "inverse-surface": "#3d2c31",
-                        "tertiary-container": "#907010",
-                        "on-tertiary-fixed-variant": "#594400",
-                        "on-error": "#ffffff",
-                        "tertiary-fixed-dim": "#e9c25e",
-                        "on-secondary-fixed": "#001f2a",
-                        "secondary-fixed-dim": "#6cd3fc",
-                        "primary-container": "#df0b81",
-                        "secondary": "#006783",
-                        "on-error-container": "#93000a",
-                        "on-tertiary-fixed": "#251a00",
-                        "primary-fixed": "#ffd9e3",
-                        "tertiary-fixed": "#ffdf95",
-                        "on-secondary-container": "#005c75",
-                        "inverse-primary": "#ffb0cb",
-                        "primary-fixed-dim": "#ffb0cb",
-                        "outline-variant": "#e1bdc7",
-                        "surface-dim": "#efd3da",
-                        "on-tertiary": "#ffffff",
-                        "surface-tint": "#b80069",
-                        "on-surface-variant": "#5a3f48",
-                        "error": "#ba1a1a",
-                        "surface-container-highest": "#f8dbe3",
-                        "secondary-fixed": "#bce9ff",
                         "primary": "#b40067",
-                        "tertiary": "#735800",
-                        "on-primary-fixed-variant": "#8d004f",
+                        "secondary": "#006783",
                         "background": "#fff8f8",
-                        "surface-container-high": "#fee1e8",
-                        "secondary-container": "#70d6ff",
-                        "on-surface": "#27171c",
-                        "on-background": "#27171c",
-                        "surface-container-low": "#fff0f3",
-                        "inverse-on-surface": "#ffecf0",
-                        "on-primary": "#ffffff",
-                        "surface-bright": "#fff8f8",
-                        "on-secondary-fixed-variant": "#004d63",
-                        "on-secondary": "#ffffff",
-                        "on-primary-fixed": "#3e0020"
+                        "surface": "#ffffff"
                     },
                     "borderRadius": {
-                        "DEFAULT": "1rem",
-                        "lg": "2rem",
-                        "xl": "3rem",
-                        "full": "9999px"
-                    },
-                    "spacing": {
-                        "container-max": "1200px",
-                        "base": "8px",
-                        "md": "24px",
-                        "gutter": "24px",
-                        "xs": "4px",
-                        "lg": "48px",
-                        "xl": "80px",
-                        "sm": "12px"
-                    },
-                    "fontFamily": {
-                        "headline-lg": ["Plus Jakarta Sans"],
-                        "body-md": ["Plus Jakarta Sans"],
-                        "label-bold": ["Plus Jakarta Sans"],
-                        "headline-xl": ["Plus Jakarta Sans"]
-                    },
-                    "fontSize": {
-                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
-                        "body-md": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "500"}],
-                        "label-bold": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "700"}],
-                        "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+                        "xl": "1.5rem",
+                        "2xl": "2.5rem"
                     }
-                },
-            },
+                }
+            }
         }
     </script>
 <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.6);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-        }
-    </style>
+    body {
+        background: radial-gradient(circle at top right, rgba(112, 214, 255, 0.1), transparent),
+                    radial-gradient(circle at bottom left, rgba(223, 11, 129, 0.05), #fff8f8);
+    }
+    .glass-effect {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+    .floating {
+        animation: float 6s ease-in-out infinite;
+    }
+    @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0px); }
+    }
+</style>
 </head>
-<body class="bg-background font-body-md text-on-background min-h-screen">
-<!-- TopAppBar -->
-<header class="bg-white/60 dark:bg-gray-900/60 backdrop-blur-xl rounded-full sticky top-4 mx-4 z-50 shadow-[0_10px_40px_rgba(255,51,153,0.15)] flex justify-between items-center w-[calc(100%-2rem)] max-w-5xl md:mx-auto px-6 py-3">
-<div class="flex items-center gap-4"><button aria-label="Indietro" class="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-md text-primary hover:scale-110 active:scale-95 transition-transform border border-surface-variant">
-<span class="material-symbols-outlined">chevron_left</span>
-</button>
-<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary ring-2 ring-primary-fixed">
-<img alt="student profile photo" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uiGVfv4D8hinGrYt2akA4RNsy79CQCz9_bltIq62YtDWGg8IE5xgph-nEpivKyRCeFOLmT6rBVGn_zwKSzmpetmNPUW8SAqjyHM52KClGBWHMnxQ0TxV9HNdw09FjIBYZy4U5OMDbE3ByMOQlXXN3QgQI3Dng_8TfXwPwWQ_MtP4c_WeRu2FsbkvXFsTpVUGqd4PDdmQdFyRkEEEF2H2xfGbmC5Xuh-upXmTwEraN_JCtAPeQQX74f9sz8">
-</div>
-<span class="text-2xl font-black text-pink-500 dark:text-pink-400 font-['Plus_Jakarta_Sans'] tracking-tight">Chiara Folci</span>
-</div>
-<div class="hidden md:flex items-center gap-8">
-<a class="text-slate-500 dark:text-slate-400 font-medium hover:scale-105 hover:bg-pink-50 transition-all duration-300 px-4 py-2 rounded-full" href="#">Progetti</a>
-<a class="text-pink-600 dark:text-pink-300 font-extrabold hover:scale-105 hover:bg-pink-50 transition-all duration-300 px-4 py-2 rounded-full" href="#">PCTO</a>
-<a class="text-slate-500 dark:text-slate-400 font-medium hover:scale-105 hover:bg-pink-50 transition-all duration-300 px-4 py-2 rounded-full" href="#">Contatti</a>
-</div>
-<button class="material-symbols-outlined text-pink-500 hover:scale-105 active:scale-95 transition-transform p-2">menu</button>
+<body class="text-[#27171c] font-['Plus_Jakarta_Sans'] min-h-screen">
+
+<header class="max-w-6xl mx-auto px-6 py-8 flex justify-between items-center">
+    <button class="w-12 h-12 rounded-full bg-white shadow-xl flex items-center justify-center text-primary hover:scale-110 active:scale-95 transition-all" onclick="history.back()">
+        <span class="material-symbols-outlined font-bold">arrow_back</span>
+    </button>
+    <div class="flex items-center gap-3 glass-effect px-4 py-2 rounded-full shadow-sm">
+        <div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary/20">
+            <img alt="Chiara Folci" class="w-full h-full object-cover" src="fotogenerata.png">
+        </div>
+        <span class="text-lg font-extrabold text-primary">Chiara Folci</span>
+    </div>
 </header>
-<main class="max-w-5xl mx-auto px-6 pt-xl pb-xl space-y-xl">
-<!-- Hero Section: Experience Header -->
-<section class="relative">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
-<div class="lg:col-span-7 space-y-md">
-<div class="inline-flex items-center gap-xs px-4 py-2 bg-secondary-container text-on-secondary-container rounded-full font-label-bold text-label-bold">
-<span class="material-symbols-outlined text-[18px]">school</span>
-                        PCTO 2025
-                    </div>
-<h1 class="font-headline-xl text-headline-xl text-primary tracking-tight">Summer School Frascati</h1>
-<p class="text-body-md text-on-surface-variant max-w-xl">
-                        Un viaggio immersivo nel cuore della ricerca scientifica. Un'opportunità unica per esplorare le nuove frontiere dell'informatica e della fisica in un contesto d'eccellenza.
+
+<main class="max-w-6xl mx-auto px-6 pb-24">
+    <section class="flex flex-col lg:flex-row gap-12 items-center py-10">
+        <div class="flex-1 space-y-8 text-center lg:text-left">
+            <div class="inline-block bg-secondary/10 text-secondary px-6 py-2 rounded-full font-bold text-sm tracking-wide uppercase">
+                🚀 Giugno 2025
+            </div>
+            
+            <div class="flex flex-col lg:flex-row items-center gap-6 justify-center lg:justify-start">
+                <img src="frascati.jfif" alt="Frascati" class="w-24 h-24 md:w-32 md:h-32 rounded-3xl object-cover shadow-2xl floating border-4 border-white">
+                <h1 class="text-5xl md:text-7xl font-black tracking-tight leading-none">
+                    Summer School <br><span class="text-primary">Frascati</span>
+                </h1>
+            </div>
+            
+            <p class="text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                Un'esperienza immersiva nel mondo della ricerca scientifica presso i Laboratori Nazionali di Frascati dell'INFN, esplorando la fisica delle particelle.
+            </p>
+        </div>
+    </section>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-12">
+        <div class="lg:col-span-2">
+            <div class="glass-effect p-8 md:p-12 rounded-2xl shadow-xl">
+                <h2 class="text-3xl font-black mb-6 flex items-center gap-3 text-secondary">
+                    <span class="material-symbols-outlined text-4xl">description</span> 
+                    Descrizione Attività
+                </h2>
+                <div class="prose prose-slate lg:prose-xl">
+                    <p class="text-lg text-slate-700 leading-relaxed">
+                        Durante questa settimana ho partecipato a lezioni teoriche e sessioni sperimentali, scoprendo come funzionano i grandi acceleratori e i rivelatori di particelle che studiano l'universo.
                     </p>
-<div class="flex flex-wrap gap-sm pt-base">
-<div class="flex items-center gap-xs bg-white shadow-sm px-6 py-3 rounded-full border-2 border-surface-variant">
-<span class="material-symbols-outlined text-primary">calendar_today</span>
-<span class="font-label-bold">Giugno 2025</span>
-</div>
-<div class="flex items-center gap-xs bg-white shadow-sm px-6 py-3 rounded-full border-2 border-surface-variant">
-<span class="material-symbols-outlined text-primary">location_on</span>
-<span class="font-label-bold">Roma, Italia</span>
-</div>
-</div>
-</div>
-<div class="lg:col-span-5 relative">
-<div class="aspect-square rounded-xl overflow-hidden shadow-2xl border-4 border-white rotate-3 hover:rotate-0 transition-transform duration-500">
-<img alt="Frascati Summer School Experience" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uhv_6XFCrG7YttfFJEYrj1kbt6RxqvB0qfNHIWxYI0SSDYDiuBeINQ6_WXCDCNIl71NCE3RZuHT-EhIa9Ld2I7edi3Kf_9GMXJmWxiACaDL6zefMctjJ1iuVx_yrvn6Cx3jhNTkkxQe39JarL69TuFmknsmeaskcIOrybR-7q3VZ2B9yXFKgq_EIbRoiAGmiTj5N-MpDY8SHaCHWiwa3pHMZturCPAT92O7dfB3t5zhBMFWa_Y8YJ3atxshs3a5sLC3uTW7okRYLA">
-</div>
-<!-- Decorative element -->
-<div class="absolute -bottom-6 -left-6 w-24 h-24 bg-tertiary-fixed rounded-full -z-10 animate-pulse"></div>
-<div class="absolute -top-6 -right-6 w-32 h-32 bg-secondary-fixed rounded-full -z-10 opacity-50"></div>
-</div>
-</div>
-</section>
-<!-- Bento Grid Details -->
-<section class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-<!-- Large Focus Card -->
-<div class="md:col-span-2 glass-card p-xl rounded-xl border-2 border-white shadow-[0_20px_50px_rgba(255,51,153,0.1)] flex flex-col justify-between hover:scale-[1.01] transition-transform duration-300">
-<div class="space-y-md">
-<div class="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center text-white shadow-lg mb-md">
-<span class="material-symbols-outlined text-[32px]">biotech</span>
-</div>
-<h2 class="font-headline-lg text-headline-lg text-primary">Il mio percorso</h2>
-<p class="text-body-md text-on-surface-variant leading-relaxed">
-                        Il programma ha offerto un approfondimento critico sulle tematiche scientifiche contemporanee. Dalla meccanica quantistica alla programmazione avanzata, ogni sessione è stata progettata per stimolare la curiosità intellettuale e la risoluzione di problemi complessi in team multidisciplinari.
-                    </p>
-</div>
-<div class="flex gap-sm mt-xl">
-<span class="bg-secondary-fixed/30 text-on-secondary-fixed-variant px-4 py-2 rounded-full font-label-bold text-[12px]">FISICA</span>
-<span class="bg-tertiary-fixed/30 text-on-tertiary-fixed-variant px-4 py-2 rounded-full font-label-bold text-[12px]">CODING</span>
-<span class="bg-primary-fixed/30 text-on-primary-fixed-variant px-4 py-2 rounded-full font-label-bold text-[12px]">INNOVAZIONE</span>
-</div>
-</div>
-<!-- Small Info Cards Column -->
-<div class="space-y-gutter">
-<div class="bg-white p-md rounded-xl shadow-md border-2 border-surface-variant flex items-center gap-md hover:bg-pink-50 transition-colors">
-<div class="p-4 bg-tertiary-container rounded-full text-white">
-<span class="material-symbols-outlined">psychology</span>
-</div>
-<div>
-<h4 class="font-bold text-primary">Soft Skills</h4>
-<p class="text-sm">Lavoro di squadra &amp; Problem solving</p>
-</div>
-</div>
-<div class="bg-white p-md rounded-xl shadow-md border-2 border-surface-variant flex items-center gap-md hover:bg-pink-50 transition-colors">
-<div class="p-4 bg-secondary rounded-full text-white">
-<span class="material-symbols-outlined">terminal</span>
-</div>
-<div>
-<h4 class="font-bold text-primary">Visite</h4>
-<p class="text-sm">Laboratori Nazionali di Frascati</p>
-</div>
-</div>
-<div class="bg-white p-md rounded-xl shadow-md border-2 border-surface-variant flex items-center gap-md hover:bg-pink-50 transition-colors">
-<div class="p-4 bg-primary rounded-full text-white">
-<span class="material-symbols-outlined">stars</span>
-</div>
-<div>
-<h4 class="font-bold text-primary">Certificazione</h4>
-<p class="text-sm">Attestato di partecipazione&nbsp;</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Location Highlight Section -->
-<section class="glass-card rounded-xl overflow-hidden border-2 border-white shadow-xl">
-<div class="grid grid-cols-1 md:grid-cols-2">
-<div class="p-xl space-y-md">
-<h3 class="font-headline-lg text-headline-lg text-primary">Ambiente Stimolante</h3>
-<p class="text-body-md text-on-surface-variant">
-                        Frascati, centro nevralgico della ricerca scientifica italiana, ha fornito la cornice perfetta per questa Summer School. Vivere e studiare a pochi passi dai laboratori nazionali ci ha permesso di respirare l'aria della vera ricerca sul campo.
-                    </p>
-<a class="group inline-flex items-center gap-sm bg-primary text-white px-8 py-4 rounded-full font-label-bold hover:scale-105 active:scale-95 transition-all shadow-lg" href="https://www.google.com/maps/search/?api=1&amp;query=Laboratori+Nazionali+di+Frascati+dell'INFN,+Via+Enrico+Fermi,+54,+00044+Frascati+RM,+Italy" rel="noopener noreferrer" target="_blank">
-                        SCOPRI IL LUOGO
-                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
-</a>
-</div>
-<div class="h-64 md:h-auto min-h-[300px] relative overflow-hidden">
-<img alt="Aerial view of the Frascati research center" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uhnSqlbBHi5MamqjiS127HZinwvBDflsPBgc_swkBxe862cvXFMs3btulmA5qZ2i680cqY5TiorK3jDLeMO5UglPsD7Zp2SGQLfM5LFzdcB012werfdW-e0uNwd65PMASK6WKFwE5TqNyFdHT5PxQxb0RSJVcCG85VzXN8roJw2PYCnQDyETClsYpDT_vtKkG-UiCnZk0X9ReQWMJqlsxRShSwm6oUPv0_12la4e2rC95mfwsnPK2dHqJ7kK-aMZB4z4Um60oX9">
-<div class="absolute inset-0 bg-primary/10 backdrop-overlay"></div>
-</div>
-</div>
-</section>
-<!-- Quote / Takeaway -->
-<section class="text-center py-lg bg-surface-container-high rounded-xl px-md border-2 border-dashed border-primary/30">
-<span class="material-symbols-outlined text-primary text-[48px] mb-md">format_quote</span>
-<blockquote class="font-headline-lg text-headline-lg text-on-surface italic max-w-3xl mx-auto">
-                "Questa esperienza ha ridefinito il mio modo di vedere la tecnologia, non solo come strumento, ma come linguaggio per comprendere l'universo."
-            </blockquote>
-</section>
+                </div>
+                
+                <div class="mt-10 p-4 bg-white/50 rounded-2xl border border-white/50 italic text-slate-500 text-center">
+                    "La scienza non è solo studio, è scoperta continua."
+                </div>
+            </div>
+        </div>
+
+        <div class="space-y-8">
+            <div class="bg-primary p-10 rounded-2xl shadow-2xl text-white transform hover:-rotate-1 transition-transform">
+                <h3 class="text-2xl font-black mb-8 border-b border-white/20 pb-4">Competenze</h3>
+                <ul class="space-y-6">
+                    <li class="flex items-center gap-4 group">
+                        <span class="material-symbols-outlined bg-white/20 p-2 rounded-lg group-hover:bg-white group-hover:text-primary transition-colors">atom</span>
+                        <span class="font-bold text-lg">Fisica Moderna</span>
+                    </li>
+                    <li class="flex items-center gap-4 group">
+                        <span class="material-symbols-outlined bg-white/20 p-2 rounded-lg group-hover:bg-white group-hover:text-primary transition-colors">analytics</span>
+                        <span class="font-bold text-lg">Analisi Dati</span>
+                    </li>
+                    <li class="flex items-center gap-4 group">
+                        <span class="material-symbols-outlined bg-white/20 p-2 rounded-lg group-hover:bg-white group-hover:text-primary transition-colors">groups</span>
+                        <span class="font-bold text-lg">Team Working</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="glass-effect p-8 rounded-2xl text-center">
+                <span class="material-symbols-outlined text-5xl text-secondary mb-4">science</span>
+                <p class="font-black text-secondary">INFN - Frascati</p>
+                <p class="text-sm text-slate-400">Laboratori Nazionali</p>
+            </div>
+        </div>
+    </div>
 </main>
-<!-- Footer -->
-<footer class="bg-pink-50 dark:bg-slate-950 full-width rounded-t-[48px] border-t-2 border-pink-100 dark:border-pink-900/30 w-full flex flex-col md:flex-row justify-between items-center px-12 py-16 gap-8">
-<div class="flex flex-col gap-4 items-center md:items-start">
-<span class="font-black text-pink-600 text-xl font-['Plus_Jakarta_Sans']">Design di Chiara Folci</span>
-<p class="font-['Plus_Jakarta_Sans'] text-sm font-semibold text-slate-600 dark:text-slate-400">© 2024 Built with Joy &amp; Pixels</p>
-</div>
-<nav class="flex gap-8">
-<a class="font-['Plus_Jakarta_Sans'] text-sm font-semibold text-slate-600 dark:text-slate-400 hover:text-pink-500 hover:underline decoration-2 underline-offset-4 transition-colors duration-200" href="#">Projects</a>
-<a class="font-['Plus_Jakarta_Sans'] text-sm font-semibold text-slate-600 dark:text-slate-400 hover:text-pink-500 hover:underline decoration-2 underline-offset-4 transition-colors duration-200" href="#">Resume</a>
-<a class="font-['Plus_Jakarta_Sans'] text-sm font-semibold text-slate-600 dark:text-slate-400 hover:text-pink-500 hover:underline decoration-2 underline-offset-4 transition-colors duration-200" href="#">Say Hello</a>
-</nav>
-<div class="flex gap-4">
-<div class="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm text-pink-600 hover:scale-110 transition-transform">
-<span class="material-symbols-outlined">code</span>
-</div>
-<div class="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm text-pink-600 hover:scale-110 transition-transform">
-<span class="material-symbols-outlined">hub</span>
-</div>
-</div>
+
+<footer class="bg-white/80 backdrop-blur-md border-t border-slate-100 py-12 px-6">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+        <div class="text-center md:text-left">
+            <span class="font-black text-primary text-2xl">Design di Chiara Folci</span>
+            <p class="text-slate-400 text-sm font-medium mt-1">© 2024 Built with Joy & Pixels</p>
+        </div>
+        <nav class="flex gap-8">
+            <a href="esperienze.html" class="text-sm font-bold text-slate-600 hover:text-primary transition-colors">Projects</a>
+            <a href="index.html" class="text-sm font-bold text-slate-600 hover:text-primary transition-colors">Home</a>
+        </nav>
+    </div>
 </footer>
-
-
-
 
 </body></html>
